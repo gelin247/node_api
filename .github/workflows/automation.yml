@@ -1,0 +1,23 @@
+name: Docker Image CI
+
+on: push
+
+jobs: 
+
+  build-container:
+    name: Build Docker Container Image
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: check out de repo    
+    - uses: actions/checkout@v3
+    
+    - name: publish to dockerhub
+      uses: docker/build-push-action@v1
+      with: 
+        username: ${{ secrets.DOCKERUSERNAME }}
+        password: ${{ secrets.DOCKERPASSWORD }}
+        repository: gelin247/node_api
+        tags: latest, ${{ github.run_number }}
+
+    
