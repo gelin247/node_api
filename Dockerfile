@@ -1,7 +1,7 @@
 FROM node:18.12.0
 WORKDIR /app
-COPY package*.json ./
+COPY ./NODE_API_RODRIGO/package*.json ./
 RUN npm install
-COPY src ./
+COPY ./NODE_API_RODRIGO ./
 EXPOSE 8087
 CMD ["npm", "start"]
