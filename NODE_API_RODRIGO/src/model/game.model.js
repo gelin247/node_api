@@ -9,12 +9,11 @@ module.exports = (sequelize, DataTypes) => {
         visitante: DataTypes.STRING,
         gols_mandante: DataTypes.INTEGER,
         gols_visitante: DataTypes.INTEGER,
-        data: DataTypes.DATE,
-        horario: DataTypes.STRING,
-        estadio: DataTypes.STRING
+        data_partida: DataTypes.DATE,
+
     }, {
         timestamps: false,
         freezeTableName: true
-    });
+    })
     return Game;
 }
