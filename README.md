@@ -28,7 +28,7 @@
     
 **Docker Hub**
 
-Endpoints da API:
+Puxar a imagem do dockerhub:
 
     docker pull gelin247/node_api
     
