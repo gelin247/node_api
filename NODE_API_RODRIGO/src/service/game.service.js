@@ -48,7 +48,7 @@ const getByTeam = async nomeTime => {
 const getByDate = async dataJogo => {
     return await game.findAll({
         where: {
-            data: dataJogo
+            data_partida: dataJogo
         }
     })
 }
@@ -63,4 +63,3 @@ module.exports = {
     getByDate
 } 
 
-//sexo
